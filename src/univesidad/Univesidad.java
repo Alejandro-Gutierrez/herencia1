@@ -14,9 +14,9 @@ public class Univesidad {
         
         
         String tipoDocumento , Documento, Apellido,  Nombres, cargo , fechaContrato,
-                codigo, facultad,  programa, profesion, asignatura;
+                codigo, facultad,  programa, profesion, asignatura, fechaInicio, fechaFin;
         
-        int edad,semestre;
+        int edad,semestre, cantProyectos;
         boolean activo;
         
         
@@ -40,6 +40,7 @@ public class Univesidad {
         
             switch(op){
                 case 1:
+                    System.out.println("");
                     System.out.println("Ingrese Tipo de Documento: ");
                     tipoDocumento=leer.next();
                     System.out.println("");
@@ -89,7 +90,7 @@ public class Univesidad {
                 break;
                 
                 case 2:
-                    
+                    System.out.println("");
                     System.out.println("Ingrese Tipo de Documento: ");
                     tipoDocumento=leer.next();
                     System.out.println("");
@@ -130,6 +131,122 @@ public class Univesidad {
                     
                     
                 case 3:
+                    int profesor=0;
+                    System.out.println("");
+                    System.out.println("[1] Catedratico");
+                    System.out.println("[2] Planta");
+                    System.out.println("");
+                    System.out.println("Seleccione una opcion: ");
+                    profesor=leer.nextInt();
+                    
+                    switch(profesor){
+                        case 1:
+                            System.out.println("");
+                            System.out.println("Ingrese Tipo de Documento: ");
+                            tipoDocumento=leer.next();
+                            System.out.println("");
+
+                            System.out.println("Ingrese Documento: ");
+                            Documento=leer.next();
+                            System.out.println("");
+
+                            System.out.println("Ingreses Nombres: ");
+                            Nombres=leer.next();
+                            System.out.println("");
+
+                            System.out.println("Ingrese Apellidos: ");
+                            Apellido=leer.next();
+                            System.out.println("");
+
+                            System.out.println("Ingrese edad: ");
+                            edad=leer.nextInt();
+                            System.out.println("");
+
+                            System.out.println("Ingrese Estado true / false: ");
+                            activo=leer.nextBoolean();
+                            System.out.println("");
+                            
+                            System.out.println("Ingrese la profesion: ");
+                            profesion=leer.next();
+                            System.out.println("");
+                            
+                            System.out.println("Ingrese Asignatura: ");
+                            asignatura=leer.next();
+                            System.out.println("");
+                            
+                            System.out.println("Ingrese Fecha De Incio: ");
+                            fechaInicio=leer.next();
+                            System.out.println("");
+                            
+                            System.out.println("Ingrese Fecha De Fin: ");
+                            fechaFin=leer.next();
+                            System.out.println("");
+                            
+                            cate1= new catedratico(tipoDocumento, Documento, Apellido, Nombres,edad
+                                    ,activo,profesion, asignatura,fechaInicio, fechaFin);
+                            
+                            
+                            break;
+                            
+                        case 2:
+                            
+                            System.out.println("");
+                            System.out.println("Ingrese Tipo de Documento: ");
+                            tipoDocumento=leer.next();
+                            System.out.println("");
+
+                            System.out.println("Ingrese Documento: ");
+                            Documento=leer.next();
+                            System.out.println("");
+
+                            System.out.println("Ingreses Nombres: ");
+                            Nombres=leer.next();
+                            System.out.println("");
+
+                            System.out.println("Ingrese Apellidos: ");
+                            Apellido=leer.next();
+                            System.out.println("");
+
+                            System.out.println("Ingrese edad: ");
+                            edad=leer.nextInt();
+                            System.out.println("");
+
+                            System.out.println("Ingrese Estado true / false: ");
+                            activo=leer.nextBoolean();
+                            System.out.println("");
+                            
+                            System.out.println("Ingrese la profesion: ");
+                            profesion=leer.next();
+                            System.out.println("");
+                            
+                            System.out.println("Ingrese Asignatura: ");
+                            asignatura=leer.next();
+                            System.out.println("");
+                            
+                            System.out.println("Ingrese Fecha De Contrato: ");
+                            fechaContrato=leer.next();
+                            System.out.println("");
+                            
+                            System.out.println("Ingrese la Cantidad de proyectos: ");
+                            cantProyectos =leer.nextInt();
+                            System.out.println("");
+                            
+                            planta1 = new Planta(tipoDocumento, Documento, Apellido, Nombres,edad
+                                    ,activo,profesion, asignatura,fechaContrato, cantProyectos);
+                            
+                            
+                            
+                            break;
+                        
+                    }
+                    
+                    
+                    
+                    break;
+                    
+                case 4:
+                    System.out.println("");
+                    System.out.println("");
                     break;
             }
         }while(seguir=!false);
