@@ -263,7 +263,7 @@ public class Univesidad {
                             System.out.println("-------Alumnos-------");
                             System.out.println("");
                             for(int q=0; q<PersonalAlumno.size(); q++){   
-                                System.out.println(PersonalAlumno.get(0).mostrar());
+                                System.out.println(PersonalAlumno.get(q).mostrar());
                                 System.out.println("");
                             }
                             break;
@@ -271,7 +271,7 @@ public class Univesidad {
                             System.out.println("-------Administrativos-------");
                             System.out.println("");
                             for(int q=0; q<Administrativo.size(); q++){   
-                                System.out.println(Administrativo.get(0).mostrar());
+                                System.out.println(Administrativo.get(q).mostrar());
                                 System.out.println("");
                             }
                             break;
@@ -288,7 +288,7 @@ public class Univesidad {
                                     System.out.println("-------catedraticos-------");
                                     System.out.println("");
                                     for(int q=0; q<catedraticos.size(); q++){   
-                                        System.out.println(catedraticos.get(0).mostrar());
+                                        System.out.println(catedraticos.get(q).mostrar());
                                         System.out.println("");
                                     }
                                 break;
@@ -297,19 +297,13 @@ public class Univesidad {
                                     System.out.println("-------Planta-------");
                                     System.out.println("");
                                     for(int q=0; q<Plantas.size(); q++){   
-                                        System.out.println(Plantas.get(0).mostrar());
+                                        System.out.println(Plantas.get(q).mostrar());
                                         System.out.println("");
                                     }
-                                 break;
-                                    
-                            
+                                 break;  
                             }
-                            break;
-                            
-                            
-                    }
-                    
-                    
+                            break;       
+                    }  
                     break;
             }
         }while(seguir=!false);
