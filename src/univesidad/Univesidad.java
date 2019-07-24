@@ -1,6 +1,12 @@
 
 package univesidad;
 
+
+/**
+ *
+ * @Luis alejandro gutierrez pimienta
+ * @edinson enrique bornachea benitez
+ */
 import java.util.ArrayList;
 import java.util.Scanner;
 public class Univesidad {
