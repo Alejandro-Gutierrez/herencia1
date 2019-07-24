@@ -24,6 +24,8 @@ public class Univesidad {
         
         ArrayList <Alumnos> PersonalAlumno = new ArrayList();
         ArrayList <Administrativo> Administrativo = new ArrayList();
+        ArrayList <catedratico> catedraticos = new ArrayList();
+        ArrayList <Planta> Plantas = new ArrayList();
        boolean seguir=true;
        
         do{
@@ -185,6 +187,7 @@ public class Univesidad {
                             cate1= new catedratico(tipoDocumento, Documento, Apellido, Nombres,edad
                                     ,activo,profesion, asignatura,fechaInicio, fechaFin);
                             
+                            catedraticos.add(cate1);
                             
                             break;
                             
@@ -234,7 +237,7 @@ public class Univesidad {
                             planta1 = new Planta(tipoDocumento, Documento, Apellido, Nombres,edad
                                     ,activo,profesion, asignatura,fechaContrato, cantProyectos);
                             
-                            
+                            Plantas.add(planta1);
                             
                             break;
                         
@@ -245,8 +248,68 @@ public class Univesidad {
                     break;
                     
                 case 4:
+                    int mostrar=0;
                     System.out.println("");
-                    System.out.println("");
+                    System.out.println("--------------------");
+                    System.out.println("[1] Alumnos");
+                    System.out.println("[2] Administrativos");
+                    System.out.println("[3] Docentes");
+                    System.out.println("--------------------");
+                    System.out.println("Seleccione una opcion: ");
+                    mostrar=leer.nextInt();
+                    
+                    switch(mostrar){
+                        case 1:
+                            System.out.println("-------Alumnos-------");
+                            System.out.println("");
+                            for(int q=0; q<PersonalAlumno.size(); q++){   
+                                System.out.println(PersonalAlumno.get(0).mostrar());
+                                System.out.println("");
+                            }
+                            break;
+                        case 2:
+                            System.out.println("-------Administrativos-------");
+                            System.out.println("");
+                            for(int q=0; q<Administrativo.size(); q++){   
+                                System.out.println(Administrativo.get(0).mostrar());
+                                System.out.println("");
+                            }
+                            break;
+                        case 3:
+                            int mostraop=0;
+                            System.out.println("-----------------");
+                            System.out.println("[1] Catedraticos");
+                            System.out.println("[3] Planta");
+                            System.out.println("Seleccione una opcion: ");
+                            mostraop=leer.nextInt();
+                            
+                            switch(mostraop){
+                                case 1:
+                                    System.out.println("-------catedraticos-------");
+                                    System.out.println("");
+                                    for(int q=0; q<catedraticos.size(); q++){   
+                                        System.out.println(catedraticos.get(0).mostrar());
+                                        System.out.println("");
+                                    }
+                                break;
+                                
+                                case 2:
+                                    System.out.println("-------Planta-------");
+                                    System.out.println("");
+                                    for(int q=0; q<Plantas.size(); q++){   
+                                        System.out.println(Plantas.get(0).mostrar());
+                                        System.out.println("");
+                                    }
+                                 break;
+                                    
+                            
+                            }
+                            break;
+                            
+                            
+                    }
+                    
+                    
                     break;
             }
         }while(seguir=!false);
