@@ -32,7 +32,7 @@ public class Univesidad {
         ArrayList <Administrativo> Administrativo = new ArrayList();
         ArrayList <catedratico> catedraticos = new ArrayList();
         ArrayList <Planta> Plantas = new ArrayList();
-       boolean seguir=true;
+        boolean seguir=true;
        
         do{
             
@@ -42,6 +42,7 @@ public class Univesidad {
             System.out.println("[2] Adiministrativo");
             System.out.println("[3] Docentes");
             System.out.println("[4] Mostrar Datos");
+            System.out.println("[5] Modificar");
             System.out.println("Seleccione una opcion");
             System.out.println("---------------------------------");
             op=leer.nextInt();
@@ -311,6 +312,68 @@ public class Univesidad {
                             break;       
                     }  
                     break;
+                case 5:
+                    int cambiar =0;
+                    System.out.println("-------Modificar Infromacion-----");
+                    System.out.println("--------------------------------");
+                    System.out.println("[1] Alunmos");
+                    System.out.println("[2] Adiministrativo");
+                    System.out.println("[3] Docentes");
+                    System.out.println("Seleccione una opcion");
+                    System.out.println("---------------------------------");
+                    cambiar =leer.nextInt();
+                    
+                    switch (cambiar){
+                        case 1:
+                            
+                            System.out.println("");
+                                    
+                            
+                            
+                            break;
+                            
+                        case 2:
+                            String cargoMod;
+                            int admitSelecc;
+                            
+                            for (int x=0; x<Administrativo.size(); x++){
+                                System.out.println(x+" "+ Administrativo.get(x).Nombres +" "+Administrativo.get(x).Apellido);
+                                
+                            }
+                            System.out.println("");
+                            System.out.println("Seleccione el id del Administrador: ");
+                            admitSelecc=leer.nextInt();
+                            System.out.println(" ");
+                            
+                            System.out.println("Ingrese un nuevo cargo:");
+                            cargoMod=leer.next();
+                            
+                            Administrativo.get(admitSelecc).setCargo(cargoMod);
+                            System.out.println("Se modifico con exito!!!!!!!!");
+                            
+                            
+                           
+                            
+                            
+                            
+                            
+                            
+                            break;
+                        
+                        case 3:
+                            int docenteop;
+                            System.out.println("-----------------");
+                            System.out.println("[1] Catedraticos");
+                            System.out.println("[3] Planta");
+                            System.out.println("Seleccione una opcion: ");
+                            docenteop=leer.nextInt();
+                            
+                            
+                            
+                            break;
+                    }
+                    
+                    break;
             }
         }while(seguir=!false);
         
@@ -318,16 +381,6 @@ public class Univesidad {
        
                 
                 
-         
-        
-        
-        
-        
-        
-        
-        
     }
-    
-        
     
 }
